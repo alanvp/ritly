@@ -4,6 +4,9 @@ class RitlyController < ApplicationController
 
 	def create
 		new_ritly = params.require(:ritly).permit(:link)
+		if new_ritly["link"][0] != 'h'
+			new_ritly["link"] = "http://" + new_ritly["link"]
+		end
 		ritly = Url.find_by(link: new_ritly["link"])
 		if ritly == nil
 			new_ritly['random_string'] = SecureRandom.urlsafe_base64(10)
@@ -17,6 +20,11 @@ class RitlyController < ApplicationController
 		@ritly = Url.find(id)
 	end
 
+	def go
+	random_string = params[:random_string]
+	ritly = Url.find_by(random_string: random_string)
+	redirect_to ritly[:link]
+	end
 
 
 
