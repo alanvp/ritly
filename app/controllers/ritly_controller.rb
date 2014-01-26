@@ -21,11 +21,16 @@ class RitlyController < ApplicationController
 	end
 
 	def go
-	random_string = params[:random_string]
-	ritly = Url.find_by(random_string: random_string)
-	redirect_to ritly[:link]
+		random_string = params[:random_string]
+		ritly = Url.find_by(random_string: random_string)
+		redirect_to ritly[:link]
 	end
 
+	def preview
+		random_string = params[:random_string]
+		
+		@ritly = Url.find_by(random_string: random_string)
+	end
 
 
 end
