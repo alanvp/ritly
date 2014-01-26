@@ -1,0 +1,19 @@
+<h1>Welcome to Ritly</h1>
+
+<div>
+	<%= form_for :ritly, url: create_path, method: :post do |f| %>
+	  <p>
+	    <%= f.label 'Enter URL to shorten' %><br>
+	    <%= f.text_field :link, placeholder: "Enter URL to shorten" %>
+	  </p>
+	 
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %>
+</div>
+ 
+
+
+
+
