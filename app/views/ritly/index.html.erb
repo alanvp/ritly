@@ -1,30 +1,21 @@
-<h1>Welcome to Ritly</h1>
 
-<div>
-	<%= form_for :ritly, url: create_path, method: :post do |f| %>
-	  <p>
-	    <%= f.label 'Enter URL to shorten' %><br>
-	    <%= f.text_field :link, placeholder: "Enter URL to shorten" %>
-	  </p>
-	 
-	  <p>
-	    <%= f.submit %>
-	  </p>
-	<% end %>
+<div class="entry_box">
+
+		<h1>RITLY</h1>
+		<p>From the creators of Edward Scissorhands comes RITLY, a URL shortner.</p> 
+		<%= form_for :ritly, url: create_path, method: :post do |f| %>
+		  <p>
+		    <%= f.text_field :link, placeholder: "Enter URL to shorten" %>
+		  </p>
+		 
+		  <p>
+		    <%= f.submit %>
+		  </p>
+		<% end %>
+
 </div>
  
 
-<!-- <div>
-	<%= form_for :form, url: preview_path(:short_url), method: :get do |f| %>
-	  <p>
-	    <%= f.label 'Or enter shortened URL to preview' %><br>
-	    <%= f.text_field :short_url, placeholder: "Enter shortened URL" %>
-	  </p>
-	 
-	  <p>
-	    <%= f.submit 'Preview URL' %>
-	  </p>
-	<% end %>
-</div> -->
+
 
 

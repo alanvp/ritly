@@ -1,4 +1,5 @@
 class RitlyController < ApplicationController
+
 	def index
 	end
 
@@ -28,7 +29,6 @@ class RitlyController < ApplicationController
 
 	def preview
 		random_string = params[:random_string]
-		
 		@ritly = Url.find_by(random_string: random_string)
 	end
 
