@@ -1,3 +1,35 @@
-// Place all the styles related to the ritly controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body
+{
+background-image:url('http://www.theroguedolls.com/wp-content/uploads/2013/04/edward_scissorhands.jpg');
+}
+
+div.entry_box {
+	text-align: center;
+	max-width: 300px;
+	background-color: white;
+	opacity:0.9;
+	border-radius: 8px;
+	border: 2px solid black;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333333;
+	padding: 20px;
+}
+
+div.entry_box h1 {
+	font-size: 400%;
+	margin: -10px;
+}
+
+div.entry_box p {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight:bold;
+  font-size: 14px;
+  line-height: 1.1;
+  color: #333333;
+  }
+
+img {
+	width: 285px; 
+	border: 1px solid black;
+}
